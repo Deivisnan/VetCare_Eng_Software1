@@ -1,0 +1,8 @@
+{
+  "name": "VetCare - Sistema de Gestão para Clínica Veterinária",
+  "description": "Sistema completo de gestão para clínicas veterinárias: controle de tutores, animais, agendamentos, prontuário clínico, vacinação, prescrições, finanças e notificações.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

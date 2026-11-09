@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .font-mono, .tabular-nums {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Prevent automatic iOS zoom-in on focus by ensuring font-size is at least 16px on inputs */
+  @media (max-width: 640px) {
+    input, select, textarea {
+      font-size: 16px !important;
+    }
+  }
+}
+
+/* Safe Area Inset support for modern iOS & Android smartphones */
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 0.5rem);
+}
+
+/* Accessibility / Modo Fácil for Seniors & Visually Impaired */
+.accessible-mode {
+  letter-spacing: 0.015em;
+}
+
+.accessible-mode button,
+.accessible-mode select,
+.accessible-mode input {
+  min-height: 48px;
+}
+
+.accessible-mode p,
+.accessible-mode span,
+.accessible-mode label,
+.accessible-mode td,
+.accessible-mode th {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.accessible-mode h1 {
+  font-size: 1.85rem;
+}
+
+.accessible-mode h2 {
+  font-size: 1.45rem;
+}
+
+.accessible-mode h3 {
+  font-size: 1.25rem;
+}
+
+/* Print styling for Prescriptions and Official Receipts */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  .printable-card {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+}
+
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+}
